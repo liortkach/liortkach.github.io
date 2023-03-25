@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v11.0" nonce="G5D5w5Qd"></script>
+	<audio id="audio" src="ZvikaPik-EndOfSummer.mp3"></audio>
+	<script>
+		const picker = new EmojiMart.EmojiPicker({
+			autoHide: false,
+			theme: 'dark',
+			set: 'google',
+			sheetSize: 32,
+			useButton: false,
+			onSelect: (emoji) => {
+				const textarea = document.querySelector('#message');
+				textarea.value += emoji.native;
+				textarea.focus();
+			}
+		});
+		picker.showPicker(document.querySelector('#message'));
+	</script>
+
+	<link rel="stylesheet" href="https://unpkg.com/emoji-mart/css/emoji-mart.css">
+	<script src="https://unpkg.com/emoji-mart/dist/umd/emoji-mart.min.js"></script>
+
+</head>
+
+<body>
+	<div id="menu">
+		<nav>
+			<ul>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#photos">My Photos</a></li>
+				<li><a href="#playlist">My Playlist</a></li>
+				<li><a href="#like">Like</a></li>
+				<li><a href="#qrcoder">QR code</a></li>
+				<li><a href="#spa">Q&A</a></li>
+				<li><a href="#contact">Contact Me</a></li>
+				<li class="zvika" style="margin-left: 90px;
+				font-family: 'Rubik Beastly', cursive;
+				font-size: 20px;
+				height: 40px;
+					transform: scale(1.5);">צביקה פיק</li>
+			</ul>
+		</nav>
+	</div>
+	<div>
+		<section id="about" class="section">
+			<br />
+			<br>
+			<br>
+			<br>
+			<button id="musicBut" onclick="playAudio()">Click On Me For Full Experience</button>
+			<audio id="audio" src="ZvikaPik-EndOfSummer.mp3"></audio>
+			<script>
+				function playAudio() {
+					const audio = document.getElementById('audio');
+					audio.play();
+				}
+			</script>
+			<br>
+			<br>
+			<br>
+			<h1 id="openSen">
+				אתה צריך לבוא כמו שחקן שהולך לתיאטרון, אתה יודע שמחכה לך קהל, מאות, אלפי אנשים, אתה בא לתת את השואו של החיים
+				שלך, כל מה שיש לך אתה נותן על הבמה, והלבוש הוא כלי עזר מאוד גדול להיכנס לדמות
+				<h1>
+					<br />
+					<br />
+
+
+					<h1>About Me</h1>
+					<p id="aboutMe">
+						Svika Pick (October 1949 – 14 August 2022), born Henryk Pick, was an Israeli pop singer, songwriter,
+						composer,
+						and
+						television personality.
+						<br>
+						Pick first gained traction on a national level after playing a lead part in an Israeli version of the
+						musical
+						Hair,
+						later pursuing a prolific songwriting and singing career. He later gained notoriety after co-writing "Diva",
+						which
+						won
+						<br>
+						the 1998 Eurovision Song Contest for Israel. Pick was described by peers and critics as the Israeli King of
+						Pop,
+						and
+						the Maestro.
+						<br>
+						In 1972, he entered a tune for the Shema prayer in the Chassidic Song Festival. The tune violated Jewish law
+						by repeating lines of the prayer.
+
+						Pick was one of Israel's leading pop singers in the 1970s, and was named “Israeli male singer of the year”
+						by Kol Israel every year from 1977 to 1980. He played a lead part in the Hebrew version of the musical Hair
+						in the early 1970s.
+						<br>
+						In 1998 Pick wrote the song "Diva" with lyricist Yoav Ginai and performed by Dana International, which won
+						the Eurovision Song Contest. He also wrote songs for several other Eurovision contestants. In 2002 he
+						reunited with Ginai to write the "Light a Candle" for Sarit Hadad, who represented Israel in Eurovision
+						2002. That year, Habima Theater staged a musical called Mary Lou based on Pick's old hits. In 2009, this
+						musical was made into the television series Tamid Oto Chalom (or Mary Lou), directed by Eytan Fox.
+					</p>
+					<br />
+					<br />
+					<br />
+	</div>
+	</section>
+
+	<section id="photos" class="section">
+		<br />
+		<br />
+		<br />
+
+		<br />
+		<h1>My Photos</h1>
+		<section id="slideshow"></section>
+		<script>
+			var slideshow = document.getElementById("slideshow");
+			var images = ["1.png", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg"];
+			var currentIndex = 0;
+
+			function nextImage() {
+				slideshow.getElementsByTagName("img")[currentIndex].style.opacity = 0;
+				currentIndex = (currentIndex + 1) % images.length;
+				slideshow.getElementsByTagName("img")[currentIndex].style.opacity = 1;
+			}
+
+			for (var i = 0; i < images.length; i++) {
+				var img = document.createElement("img");
+				img.src = images[i];
+				if (i === 0) {
+					img.style.opacity = 1;
+				}
+				slideshow.appendChild(img);
+			}
+
+			setInterval(nextImage, 3000);
+
+		</script>
+		<br />
+		<br />
+		<br />
+	</section>
+
+	<section id="playlist" class="section">
+		<br />
+		<h1>This Song Is A Great Inspiration For One Of My Works</h1>
+		<br />
+		<br />
+		<br />
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/8mAkMY2jvcg" title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+	</section>
+
+	<section id="like" class="section">
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<script>
+
+			let likeCount = parseInt(localStorage.getItem('likeCount')) || 0;
+			let isLiked = localStorage.getItem('isLiked') === 'true';
+
+			function updateLike() {
+				let likeButton = document.getElementById('like-button');
+				if (isLiked) {
+					document.getElementById('like-count').textContent = likeCount;
+					document.getElementById('like-text').textContent = 'You liked this page';
+					likeButton.textContent = 'Liked';
+					likeButton.setAttribute('liked', 'true');
+				} else {
+					document.getElementById('like-count').textContent = likeCount;
+					document.getElementById('like-text').textContent = 'people liked this page';
+					likeButton.textContent = 'Like';
+					likeButton.removeAttribute('liked');
+				}
+			}
+
+			function toggleLike() {
+				let likeButton = document.getElementById('like-button');
+				if (isLiked) {
+					likeCount--;
+					isLiked = false;
+				} else {
+					likeCount++;
+					isLiked = true;
+				}
+				localStorage.setItem('likeCount', likeCount);
+				localStorage.setItem('isLiked', isLiked);
+				updateLike();
+			}
+
+			if (isLiked) {
+				toggleLike();
+			}
+
+		</script>
+
+		<div>
+			<button id="like-button" onclick="toggleLike()">Like</button>
+			<span id="like-count">0</span>
+			<span id="like-text">people liked this page</span>
+		</div>
+
+		<br />
+		<br />
+		<br />
+	</section>
+
+	<section id="qrcoder" class="section">
+		<br />
+		<h1>scan my code</h1>
+		<br />
+		<img id="gitpic" src="githubio.png">
+	</section>
+
+	<section id="spa" class="section">
+		<br />
+		<br />
+		<h1>Answers</h1>
+		<br />
+		<p id="answer" dir="rtl" style="font-family: Arial; unicode-bidi: embed;">
+
+			שלושה הבדלים עיקריים בין web1.0 web2.0 web3.0:
+			<br>1)
+			<br>1. מבחינת חווית משתמש:
+			Web1 עוצב בעיקר לקריאה ועיון במסמכים, web2 הציג גם תוכן שנוצר על ידי המשתמשים עצמם ויישומי אינטרנט אחרים וweb3 כבר
+			למד מה המשתמשים יותר אהבו וככה בעצם ייעל את התצוגה.
+			<br>2. תשתית טכנולוגית:
+			Web1 התבסס על דפי HTML סטטיים, web2 כבר הציג יישומים שהינם דינמיים וweb3 משתמש כבר בבינה מלאכותית על מנת לשפר את
+			החוויה
+			<br>3. מודל עסקי:
+			Web1 הונע בעיקר על ידי הכנסות מפרסום ועסקאות של מסחר אלקטרוני, web2 כבר כלל גם מנויים וכלכלה משותפת, web3 כבר
+			השתמש גם בblockchain והשתמש במודלים עסקיים מבוזרים.
+			<br>2)
+			<br> לדוגמה חיפוש תשובה לשאלה:
+			<br>חווית המשתמש תשתנה בין הדפדפנים בצורה הבאה:
+			בנושא החוויה, מתמשים בweb1 יחפשו את המסמכים הרלוונטים דרך הפורטלים ויצטרכו להכינס ולקרוא אחד אחד עד שימצאו/יסתפקו
+			בתשובה הרצויה. בweb2 בעצם ניתן להשתמש במנוע חיפוש ולחפש בצורה הרבה יותר נוחה את התשובה כאשר ניתן למצוא פורומים
+			ואנשים שגם חיפשו/שאלו את אותה השאלה. בweb3 קיימים גם כלים אשר ימקדו בצורה חכמה בעזרת בינה מלכאתית את החיפושים שלנו
+			על מנת להקל עלינו למצוא את התשובה שאנחנו מחפשים.
+			<br>תשתית טכנולוגית:
+			בweb1 בעצם נצטרך להיכנס לדפורטל ולדפדפף בין הדפים ולחפש בצורה שהיא לא נוחה מסמכים רלוונטים לשאלה שאנחנו מחפשים.
+			בweb2 אנו נוכל להתשמש באתרים דינאמיים המשתנים ומתגובות של משתמשים וכך אולי גם להשיג תשוובת יותר חדשות ורלוונטיות.
+			בweb3 אנו נוכל להשתמש ישירות בכלים חכמים ואפליקציות ללא חיפוש בעצמנו ולתת לכלים האלו לתת לנו את התשובה.
+			<br>מודל עסקי:
+			מבחינת web1, בעצם ההכנסות מהחיפושים שלנו ילכו רק לאתרים אשר אנחנו מבקרים בהם והם נותנים לנו מענה על השאלות. בweb2
+			אולי אנחנו נשלם לאתרים או פורומים מסויימים שאנשים כותבים בהם על מנת לקבל תשובה איכותית ומהירה. בweb3 אנחנו נשלם
+			אולי מנוי לאפליקציה שתדע לענות לנו על התשובה שהיא עצמה מבוזרת על פני הרבה שרתים ובמודל עסקי שהינו מבוזר
+		</p>
+		<br />
+		<br />
+	</section>
+
+	<section id="contact" class="section">
+		<br />
+		<br />
+		<br />
+		<h1>Contact Me</h1>
+		<form action="mailto:maestro@svikapick.com" method="post" enctype="text/plain">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" required>
+
+			<label for="subject">Subject:</label>
+			<input type="text" id="subject" name="subject" required>
+
+			<label for="message">Message:</label>
+			<textarea id="message" style="text-align: left;" name="message" rows="5" required></textarea>
+
+			<div id="emoji-list">
+				<button type="button" data-emoji="😊">😊</button>
+				<button type="button" data-emoji="😂">😂</button>
+				<button type="button" data-emoji="😍">😍</button>
+				<button type="button" data-emoji="🤔">🤔</button>
+				<button type="button" data-emoji="👍">👍</button>
+				<button type="button" data-emoji="👎">👎</button>
+			</div>
+
+			<script>
+				const textarea = document.querySelector('#message');
+				const emojiList = document.querySelectorAll('#emoji-list button');
+
+				emojiList.forEach(button => {
+					button.addEventListener('click', () => {
+						const emoji = button.dataset.emoji;
+						const cursorPosition = textarea.selectionStart;
+						const textBefore = textarea.value.substring(0, cursorPosition);
+						const textAfter = textarea.value.substring(cursorPosition);
+						textarea.value = textBefore + emoji + textAfter;
+						textarea.focus();
+						textarea.setSelectionRange(cursorPosition + emoji.length, cursorPosition + emoji.length);
+					});
+				});
+			</script>
+
+			<br>
+			<button type="submit">Send</button>
+
+		</form>
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<br><a style="color: wheat"
+			href="https://www.waze.com/live-map/directions/%D7%91%D7%99%D7%AA-%D7%A2%D7%9C%D7%9E%D7%99%D7%9F-%D7%A8%D7%9E%D7%AA-%D7%94%D7%A9%D7%A8%D7%95%D7%9F-%D7%A6%D7%95%D7%9E%D7%AA-%D7%9E%D7%95%D7%A8%D7%A9%D7%94-%D7%A8%D7%9E%D7%AA-%D7%94%D7%A9%D7%A8%D7%95%D7%9F?to=place.w.22872385.228396172.2793&from=place.w.22806841.228068406.3183&utm_medium=lm_share_directions&utm_campaign=default&utm_source=waze_website">Here
+			Is The Fastest Way To Meet Me Right Now</a>
+		<br />
+		<br />
+		<br />
+	</section>
+
+
+	<script type="text/javascript">
+		$(function () {
+			$("#nav a").click(function (e) {
+				e.preventDefault();
+				$('html,body').scrollTo(this.hash, this.hash);
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).scroll(function () {
+			$('#menu').toggle($(this).scrollTop() > 1000)
+		});​
+	</script>
+</body>
+
+</html>
